@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bootlogix/schemas/skills-manifest.schema.json",
+  "title": "bootlogix Skills Manifest",
+  "description": "Schema for the bootlogix skills hub manifest",
+
+  "type": "object",
+  "required": ["$schema", "version", "workspace", "skills", "mcpServers"],
+
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "type": "string" },
+    "workspace": { "type": "string" },
+    "owner": { "type": "string" },
+    "updated": { "type": "string", "format": "date" },
+
+    "mcpServers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["command", "entryPoint", "transport"],
+        "properties": {
+          "command": { "type": "string" },
+          "entryPoint": { "type": "string" },
+          "transport": { "type": "string", "enum": ["stdio", "streamable-http"] },
+          "env": { "type": "object", "additionalProperties": { "type": "string" } },
+          "capabilities": { "type": "array", "items": { "type": "string" } },
+          "source": { "type": "string", "enum": ["local", "github"] }
+        }
+      }
+    },
+
+    "skills": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "description", "directory", "language", "mainFile", "triggers"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "directory": { "type": "string" },
+          "language": { "type": "string" },
+          "mainFile": { "type": "string" },
+          "entryPoints": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
+          "triggers": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "referenceFiles": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tools": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "dependencies": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "relatedSkills": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "allowedTools": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "source": {
+            "type": "object",
+            "required": ["type"],
+            "properties": {
+              "type": { "type": "string", "enum": ["github", "local", "npm"] },
+              "owner": { "type": "string" },
+              "repo": { "type": "string" },
+              "path": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "skillGroups": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "skills"],
+        "properties": {
+          "description": { "type": "string" },
+          "skills": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+
+    "conventions": {
+      "type": "object",
+      "properties": {
+        "filePaths": {
+          "type": "object",
+          "properties": {
+            "workspaceRoot": { "type": "string" },
+            "tempFiles": { "type": "string" },
+            "neverWriteTo": { "type": "array", "items": { "type": "string" } }
+          }
+        },
+        "codeQuality": {
+          "type": "object",
+          "properties": {
+            "python": {
+              "type": "object",
+              "properties": {
+                "formatter": { "type": "string" },
+                "typeChecker": { "type": "string" },
+                "lineLength": { "type": "integer" },
+                "docstringStyle": { "type": "string" },
+                "minVersion": { "type": "string" }
+              }
+            },
+            "typescript": {
+              "type": "object",
+              "properties": {
+                "mode": { "type": "string" },
+                "noAny": { "type": "boolean" },
+                "asyncAwait": { "type": "boolean" },
+                "validation": { "type": "string" },
+                "transport": { "type": "string" }
+              }
+            }
+          }
+        },
+        "aesthetics": {
+          "type": "object",
+          "properties": {
+            "frontend": {
+              "type": "object",
+              "properties": {
+                "avoid": { "type": "array", "items": { "type": "string" } },
+                "prefer": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          }
+        },
+        "git": {
+          "type": "object",
+          "properties": {
+            "commitStyle": { "type": "string" },
+            "enforcement": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

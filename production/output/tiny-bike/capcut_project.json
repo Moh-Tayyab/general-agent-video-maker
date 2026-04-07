@@ -1,0 +1,450 @@
+{
+  "schema": "capcut.project.v1",
+  "workspace": {
+    "version": "1.0.0",
+    "name": "short-tiny-bike",
+    "duration": 45000,
+    "aspect_ratio": "9:16",
+    "resolution": "1080x1920",
+    "frame_rate": 30,
+    "orientation": "portrait"
+  },
+  "resources": {
+    "placeholder_clips": 14,
+    "placeholder_texts": 15,
+    "placeholder_audio": 1,
+    "placeholder_music": 1,
+    "note": "Replace placeholder values with actual media files in CapCut"
+  },
+  "timeline": {
+    "video_track": {
+      "segments": [
+        {
+          "id": "clip_1",
+          "type": "video",
+          "start": 0,
+          "duration": 5000,
+          "content": {
+            "visual": "Reaction shot \u2014 someone's jaw drops, eyes widen",
+            "caption": "Okay, you've seen big things. You've seen small th\u2026",
+            "transition": "jump_cut",
+            "music_cue": "build_tension",
+            "notes": "Pattern interrupt: hook \u2014 get attention fast"
+          }
+        },
+        {
+          "id": "clip_2",
+          "type": "video",
+          "start": 5000,
+          "duration": 3000,
+          "content": {
+            "visual": "Extreme close-up: tiny bike sitting in an open palm",
+            "caption": "This is literally a tiny bike that fits in the pal\u2026",
+            "transition": "smooth_zoom",
+            "music_cue": "beat_drop_ting",
+            "notes": "Scale reveal moment"
+          }
+        },
+        {
+          "id": "clip_3",
+          "type": "video",
+          "start": 8000,
+          "duration": 4000,
+          "content": {
+            "visual": "Wide shot: subject next to a pencil/phone for scale comparison",
+            "caption": "No tricks. No CGI. A real, fully working build.\u2026",
+            "transition": "side_by_side",
+            "music_cue": "light_swell",
+            "notes": "Establish reality \u2014 no CGI claim"
+          }
+        },
+        {
+          "id": "clip_4",
+          "type": "video",
+          "start": 12000,
+          "duration": 3000,
+          "content": {
+            "visual": "Close-up: scale reference \u2014 smaller than your thumb",
+            "caption": "The wheels? Smaller than your thumb.\u2026",
+            "transition": "slow_mo_zoom",
+            "music_cue": "tiny_spin_sfx",
+            "notes": "Punch line on scale"
+          }
+        },
+        {
+          "id": "clip_5",
+          "type": "video",
+          "start": 15000,
+          "duration": 3000,
+          "content": {
+            "visual": "POV shot: build detail \u2014 welding, micro-components, precision",
+            "caption": "custom-built from scratch \u2014 every component engine\u2026",
+            "transition": "cut_to_detail",
+            "music_cue": "mechanical_ambient",
+            "notes": "Technical credibility beat"
+          }
+        },
+        {
+          "id": "clip_6",
+          "type": "video",
+          "start": 18000,
+          "duration": 3000,
+          "content": {
+            "visual": "Carrying reveal: puts it in his bag like a textbook",
+            "caption": "It's so small, this guy just puts it in his bag li\u2026",
+            "transition": "comedic_pop",
+            "music_cue": "comedic_pop",
+            "notes": "Comedic payoff on portability"
+          }
+        },
+        {
+          "id": "clip_7",
+          "type": "video",
+          "start": 21000,
+          "duration": 3000,
+          "content": {
+            "visual": "Wide shot: tiny subject in use \u2014 on the same roads as cars and trucks",
+            "caption": "Then pulls it out and uses it\u2026 on the same roads a\u2026",
+            "transition": "wide_to_medium",
+            "music_cue": "street_ambiance",
+            "notes": "Action reveal \u2014 scale in context"
+          }
+        },
+        {
+          "id": "clip_8",
+          "type": "video",
+          "start": 24000,
+          "duration": 3000,
+          "content": {
+            "visual": "Reaction compilation: bystanders staring, drivers reacting",
+            "caption": "Yes \u2014 on the same roads as cars and trucks.\u2026",
+            "transition": "stinger_hit",
+            "music_cue": "comedic_stinger",
+            "notes": "Social proof of impact"
+          }
+        },
+        {
+          "id": "clip_9",
+          "type": "video",
+          "start": 27000,
+          "duration": 3000,
+          "content": {
+            "visual": "Slow-mo reaction face: pure disbelief",
+            "caption": "The look on people's faces? Absolute chaos. \ud83d\ude33\u2026",
+            "transition": "freeze_frame",
+            "music_cue": "beat_hit_burst",
+            "notes": "Pattern interrupt: reaction break"
+          }
+        },
+        {
+          "id": "clip_10",
+          "type": "video",
+          "start": 30000,
+          "duration": 3000,
+          "content": {
+            "visual": "Phone scrolling animation \u2014 hand scrolling Shorts",
+            "caption": "This is the kind of thing that makes you stop scro\u2026",
+            "transition": "slide_up",
+            "music_cue": "stop_scroll_sfx",
+            "notes": "Relatability hook \u2014 'this is why you're here'"
+          }
+        },
+        {
+          "id": "clip_11",
+          "type": "video",
+          "start": 33000,
+          "duration": 3000,
+          "content": {
+            "visual": "Minimalist graphic: brain + scale icon animation",
+            "caption": "Science says we're drawn to unexpected scale \u2014 and\u2026",
+            "transition": "fade_graphic",
+            "music_cue": "subtle_whoosh",
+            "notes": "Science beat \u2014 why it works"
+          }
+        },
+        {
+          "id": "clip_12",
+          "type": "video",
+          "start": 36000,
+          "duration": 3000,
+          "content": {
+            "visual": "Silhouette against backdrop \u2014 defies what a bike is supposed to be",
+            "caption": "It defies what a bike is supposed to be.\u2026",
+            "transition": "crossfade",
+            "music_cue": "cinematic_rumble",
+            "notes": "Cinematic mood shift"
+          }
+        },
+        {
+          "id": "clip_13",
+          "type": "video",
+          "start": 39000,
+          "duration": 3000,
+          "content": {
+            "visual": "Phone screen: viral metrics / view count trending upward",
+            "caption": "And honestly? That's exactly why it broke the inte\u2026",
+            "transition": "screen_mockup",
+            "music_cue": "viral_cha_ching",
+            "notes": "Social proof of virality"
+          }
+        },
+        {
+          "id": "clip_14",
+          "type": "video",
+          "start": 42000,
+          "duration": 3000,
+          "content": {
+            "visual": "CTA card: subscribe button + channel avatar fade-out",
+            "caption": "If you found this satisfying \u2014 follow for more imp\u2026",
+            "transition": "fade_to_black",
+            "music_cue": "uplift_fadeout",
+            "notes": "Call to action \u2014 follow for more"
+          }
+        }
+      ],
+      "track_config": {
+        "locked": false,
+        "visible": true,
+        "muted": false
+      }
+    },
+    "text_track": {
+      "segments": [
+        {
+          "id": "text_1",
+          "type": "text",
+          "start": 0,
+          "duration": 3000,
+          "content": {
+            "text": "Okay, you've seen big things. You've seen small things. But have you seen THIS?",
+            "style": "bold_white",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_2",
+          "type": "text",
+          "start": 3000,
+          "duration": 3000,
+          "content": {
+            "text": "This is literally a tiny bike that fits in the palm of your hand.",
+            "style": "punch_in",
+            "extras": "\ud83d\ude33",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_3",
+          "type": "text",
+          "start": 6000,
+          "duration": 3000,
+          "content": {
+            "text": "No tricks. No CGI. A real, fully working build.",
+            "style": "green_checkmark",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_4",
+          "type": "text",
+          "start": 9000,
+          "duration": 3000,
+          "content": {
+            "text": "Meet the world's most impossibly small tiny bike.",
+            "style": "center_dramatic",
+            "extras": "\ud83e\udd2f",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_5",
+          "type": "text",
+          "start": 12000,
+          "duration": 3000,
+          "content": {
+            "text": "The wheels? Smaller than your thumb.",
+            "style": "yellow_highlight",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_6",
+          "type": "text",
+          "start": 15000,
+          "duration": 3000,
+          "content": {
+            "text": "custom-built from scratch \u2014 every component engineered at micro-scale.",
+            "style": "white",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_7",
+          "type": "text",
+          "start": 18000,
+          "duration": 3000,
+          "content": {
+            "text": "It's so small, this guy just puts it in his bag like a textbook.",
+            "style": "white",
+            "extras": "\ud83d\udcda",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_8",
+          "type": "text",
+          "start": 21000,
+          "duration": 3000,
+          "content": {
+            "text": "Then pulls it out and uses it\u2026 on the same roads as cars and trucks.",
+            "style": "italic",
+            "extras": "\ud83d\udd2c",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_9",
+          "type": "text",
+          "start": 24000,
+          "duration": 3000,
+          "content": {
+            "text": "Yes \u2014 on the same roads as cars and trucks.",
+            "style": "red_underline",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_10",
+          "type": "text",
+          "start": 27000,
+          "duration": 3000,
+          "content": {
+            "text": "The look on people's faces? Absolute chaos. \ud83d\ude33",
+            "style": "bold_white",
+            "extras": "",
+            "animation": "fade_in"
+          }
+        },
+        {
+          "id": "text_11",
+          "type": "text",
+          "start": 30000,
+          "duration": 3000,
+          "content": {
+            "text": "This is the kind of thing that makes you stop scrolling.",
+            "style": "fade_in",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_12",
+          "type": "text",
+          "start": 33000,
+          "duration": 3000,
+          "content": {
+            "text": "Science says we're drawn to unexpected scale \u2014 and this delivers.",
+            "style": "subtle_small",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_13",
+          "type": "text",
+          "start": 36000,
+          "duration": 3000,
+          "content": {
+            "text": "It defies what a bike is supposed to be.",
+            "style": "center_dramatic",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_14",
+          "type": "text",
+          "start": 39000,
+          "duration": 3000,
+          "content": {
+            "text": "And honestly? That's exactly why it broke the internet.",
+            "style": "bold_white",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        },
+        {
+          "id": "text_15",
+          "type": "text",
+          "start": 42000,
+          "duration": 3000,
+          "content": {
+            "text": "If you found this satisfying \u2014 follow for more impossibly cool things.",
+            "style": "cta_card",
+            "extras": "",
+            "animation": "punch_in"
+          }
+        }
+      ],
+      "default_style": "bold_white",
+      "default_size": 48,
+      "default_color": "#FFFFFF",
+      "default_align": "center"
+    },
+    "audio_track": {
+      "segments": [
+        {
+          "id": "vo_main",
+          "type": "voiceover",
+          "start": 0,
+          "duration": 45000,
+          "content": {
+            "style": "energetic",
+            "file": "vo_energetic.wav",
+            "note": "Replace with recorded VO"
+          }
+        }
+      ]
+    },
+    "music_track": {
+      "segments": [
+        {
+          "id": "bg_music",
+          "type": "background_music",
+          "start": 0,
+          "duration": 45000,
+          "content": {
+            "file": "background_track.mp3",
+            "fade_in": 500,
+            "fade_out": 1500,
+            "note": "Replace with licensed track"
+          }
+        }
+      ]
+    }
+  },
+  "production_notes": {
+    "pacing": "0-12s hook+reveal, 12-24s build, 24-36s payoff, 36-45s close",
+    "jump_cuts_at_lines": [
+      4,
+      6,
+      10,
+      13
+    ],
+    "pattern_interrupt_at": "27-30s (reaction compilation)",
+    "aspect_ratio": "9:16 vertical (native Shorts)",
+    "caption_placement": "centered, bottom third, or keyword highlight per line style",
+    "music_tips": {
+      "0-12s": "build tension \u2014 low drone or rising swell",
+      "12-24s": "beat drop + comedic swell on reveal",
+      "24-30s": "stinger hits on reaction cuts",
+      "30-39s": "cinematic rumble or stop-scroll SFX",
+      "39-45s": "uplift fade-out for CTA"
+    }
+  }
+}

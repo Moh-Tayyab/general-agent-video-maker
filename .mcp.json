@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "youtube-shorts-transcript-extractor": {
+      "command": "node",
+      "args": ["/home/muhammad_tayyab/.claude/skills/playwright-youtube-shorts/mcp-server/server.js"],
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
