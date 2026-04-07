@@ -1,0 +1,52 @@
+================================================================================
+SCRIPT — "World's Smallest Bicycle"
+Format: ClpQuips Viral Short | 45 seconds | 9:16
+Topic: Sergey Dashevsky rides the world's smallest working bicycle in real traffic
+Based on: Guinness World Record, September 15, 2019, Moscow
+Word count: 142 (target 130–150)
+================================================================================
+
+[HOOK — 0:00–0:05]
+This guy rides a bicycle you can fit in your palm.
+No clickbait. Real. In traffic.
+
+[REVEAL — 0:05–0:30]
+Sergey Dashevsky built the world's smallest rideable bicycle.
+It measures just 8.4 centimeters.
+That's smaller than your smartphone.
+The chain connects both wheels. Full suspension. A real saddle.
+His feet hang way off the pedals — his toes do all the work.
+No brakes. No gears. Pure balance.
+He needs constant training and perfect coordination to even move it.
+And he rides it through Moscow. In real traffic.
+
+[STING — 0:30–0:40]
+The official record is 8.4 centimeters.
+But a YouTuber built one at just 5.3 cm.
+It's not Guinness-verified — yet.
+
+[OUTRO — 0:40–0:45]
+Would you ride a bike this small?
+Drop a 🔥 if you want more world-record weirdness.
+
+================================================================================
+NARRATION NOTES
+================================================================================
+Voice Style: ENERGETIC (hook + sting) → FRIENDLY (reveal) → PROFESSIONAL (outro)
+
+Key emphasis words (stress these):
+- "PALM" — HOOK punch
+- "8.4 CENTIMETERS" — reveal number anchor
+- "YOUR SMARTPHONE" — scale comparison
+- "MOSCOW. IN REAL TRAFFIC." — climax of reveal
+- "YET" — sting delivery, pause before saying it
+
+Pacing:
+- HOOK: fast, punchy — 0.05s between lines max
+- REVEAL: medium pace, let numbers land
+- STING: slow, dramatic pause before "yet"
+- OUTRO: warm, inviting
+
+Lines per caption: 1 line = 1 screen flash
+Max characters per line: 40
+================================================================================

@@ -1,0 +1,120 @@
+{
+  "project_format_version": "3.2",
+  "platform": "CapCut",
+  "export_mode": "template",
+  "aspect_ratio": "9:16",
+  "resolution": "1080x1920",
+  "fps": 30,
+  "duration_seconds": 45,
+  "tracks": [
+    {
+      "track_id": "video_main",
+      "type": "video",
+      "clips": [
+        {
+          "id": "clip_01",
+          "source_type": "ai_footage",
+          "source_ref": "scene_02_tiny_bike_palm",
+          "start_time": 5.0,
+          "duration": 3.0,
+          "cuts": [5.0, 7.0, 9.0, 11.0, 13.0, 15.0],
+          "zoom": {"keyframe": [{"time": 5.0, "scale": 1.0}, {"time": 8.0, "scale": 1.5}], "type": "in"},
+          "transition_in": "hard",
+          "transition_out": "cut"
+        },
+        {
+          "id": "clip_02",
+          "source_type": "ai_footage",
+          "source_ref": "scene_03_scale_comparison",
+          "start_time": 15.0,
+          "duration": 4.0,
+          "cuts": [15.0, 17.5, 20.0, 22.5, 25.0],
+          "zoom": {"keyframe": [{"time": 15.0, "scale": 1.0}, {"time": 18.0, "scale": 1.3}], "type": "in"},
+          "transition_in": "cut",
+          "transition_out": "cut"
+        },
+        {
+          "id": "clip_03",
+          "source_type": "ai_footage",
+          "source_ref": "scene_04_moscow_traffic",
+          "start_time": 25.0,
+          "duration": 6.0,
+          "cuts": [25.0, 27.0, 29.0, 31.0, 33.0, 35.0, 37.0, 38.0],
+          "zoom": {"keyframe": [{"time": 25.0, "scale": 0.8}, {"time": 38.0, "scale": 2.0}], "type": "out"},
+          "transition_in": "cut",
+          "transition_out": "beat_cut"
+        },
+        {
+          "id": "clip_04",
+          "source_type": "text_only",
+          "source_ref": "scene_05_split_screen",
+          "start_time": 38.0,
+          "duration": 4.0,
+          "cuts": [38.0, 42.0],
+          "zoom": {"type": "none"},
+          "transition_in": "hard",
+          "transition_out": "cut"
+        },
+        {
+          "id": "clip_05",
+          "source_type": "text_only",
+          "source_ref": "scene_06_outro",
+          "start_time": 42.0,
+          "duration": 3.0,
+          "cuts": [42.0],
+          "zoom": {"type": "none"},
+          "transition_in": "fade",
+          "transition_out": "fade"
+        }
+      ]
+    },
+    {
+      "track_id": "captions",
+      "type": "text",
+      "captions": [
+        {"caption_id": 1,  "start": 0.0,  "end": 2.0,  "text": "THIS GUY RIDES A BICYCLE",          "pos": "center",  "anim": "scale-in-fast"},
+        {"caption_id": 2,  "start": 2.0,  "end": 4.0,  "text": "YOU CAN FIT IN YOUR PALM.",          "pos": "center",  "anim": "scale-in-fast"},
+        {"caption_id": 3,  "start": 4.0,  "end": 6.0,  "text": "NO CLICKBAIT. REAL. IN TRAFFIC.",    "pos": "center",  "anim": "flash",        "color": "#ff4444"},
+        {"caption_id": 4,  "start": 6.0,  "end": 10.0, "text": "SERGEY DASHEVSKY BUILT THE",         "pos": "bottom",  "anim": "fade-in"},
+        {"caption_id": 5,  "start": 10.0, "end": 15.0, "text": "WORLD'S SMALLEST RIDEABLE BICYCLE.", "pos": "bottom",  "anim": "fade-in"},
+        {"caption_id": 6,  "start": 15.0, "end": 18.0, "text": "IT MEASURES JUST",                  "pos": "center",  "anim": "slide-up"},
+        {"caption_id": 7,  "start": 18.0, "end": 22.0, "text": "8.4 CENTIMETERS.",                    "pos": "center",  "anim": "scale-punch",   "scale": 1.3, "color": "#ff4444"},
+        {"caption_id": 8,  "start": 22.0, "end": 26.0, "text": "SMALLER THAN YOUR SMARTPHONE.",       "pos": "center",  "anim": "fade-in"},
+        {"caption_id": 9,  "start": 26.0, "end": 30.0, "text": "CHAIN BOTH WHEELS. FULL SADDLE.",     "pos": "bottom",  "anim": "fade-in"},
+        {"caption_id": 10, "start": 30.0, "end": 34.0, "text": "HIS FEET HANG OFF THE PEDALS.",       "pos": "center",  "anim": "fade-in"},
+        {"caption_id": 11, "start": 34.0, "end": 38.0, "text": "PURE BALANCE. NO BRAKES. NO GEARS.",  "pos": "bottom",  "anim": "fade-in"},
+        {"caption_id": 12, "start": 38.0, "end": 41.0, "text": "AND HE RIDES IT THROUGH MOSCOW.",     "pos": "center",  "anim": "scale-punch",  "color": "#ffcc00"},
+        {"caption_id": 13, "start": 41.0, "end": 42.0, "text": "IN. REAL. TRAFFIC.",                  "pos": "center",  "anim": "flash-each",   "color": "#ff4444"},
+        {"caption_id": 14, "start": 42.0, "end": 46.0, "text": "THE RECORD IS 8.4 CENTIMETERS.",     "pos": "center",  "anim": "fade-in"},
+        {"caption_id": 15, "start": 46.0, "end": 50.0, "text": "BUT ONE BUILDER MADE ONE AT 5.3 CM.", "pos": "center",  "anim": "fade-in"},
+        {"caption_id": 16, "start": 50.0, "end": 54.0, "text": "NOT GUINNESS VERIFIED...",            "pos": "center",  "anim": "scale-in-slow", "color": "#ff4444"},
+        {"caption_id": 17, "start": 54.0, "end": 58.0, "text": "YET.",                                "pos": "center",  "anim": "scale-punch",  "color": "#ffcc00", "scale": 1.5},
+        {"caption_id": 18, "start": 58.0, "end": 62.0, "text": "WOULD YOU RIDE A BIKE THIS SMALL?",  "pos": "center",  "anim": "fade-in"},
+        {"caption_id": 19, "start": 62.0, "end": 65.0, "text": "DROP A 🔥 FOR MORE WEIRDNESS",       "pos": "bottom",  "anim": "fade-in"}
+      ]
+    },
+    {
+      "track_id": "voiceover",
+      "type": "audio",
+      "source": "elevenlabs_tts_output.wav",
+      "start": 0.0,
+      "volume": 1.0
+    },
+    {
+      "track_id": "music",
+      "type": "audio",
+      "source": "royalty_free_viral_beat.mp3",
+      "start": 0.0,
+      "volume": 0.65,
+      "ducking": {"enabled": true, "level": 0.3, "when": "voiceover"}
+    }
+  ],
+  "export_settings": {
+    "format": "mp4",
+    "codec": "h264",
+    "quality": "high",
+    "audio_codec": "aac",
+    "audio_bitrate": "192k"
+  },
+  "capcut_template_notes": "Import AI footage clips, apply jump cuts via 'Split' tool. Add text overlays using CapCut's 'Auto Captions' or manual text. Use 'Beat' detection to match cuts to music. Export as 1080x1920 MP4."
+}

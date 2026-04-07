@@ -1,6 +1,6 @@
 {
   "$schema": "./skills-manifest.schema.json",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workspace": "bootlogix",
   "owner": "Muhammad Tayyab",
   "updated": "2026-04-07",
@@ -22,7 +22,7 @@
     "ai-video-generation": {
       "name": "ai-video-generation",
       "description": "Generate AI videos with Google Veo, Seedance, Wan, Grok and 40+ models via inference.sh CLI. Supports text-to-video, image-to-video, avatar animation, lipsync, video upscaling, and foley sound.",
-      "directory": ".agents/skills/ai-video-generation",
+      "directory": ".claude/skills/ai-video-generation",
       "language": "bash",
       "mainFile": "SKILL.md",
       "triggers": [
@@ -53,7 +53,8 @@
       ],
       "relatedSkills": [
         "elevenlabs-tts",
-        "copywriting"
+        "copywriting",
+        "remotion"
       ],
       "allowedTools": [
         "Bash(infsh *)"
@@ -68,7 +69,7 @@
     "elevenlabs-tts": {
       "name": "elevenlabs-tts",
       "description": "ElevenLabs text-to-speech with 22+ premium voices, multilingual support, and voice tuning. Models: eleven_multilingual_v2, eleven_turbo_v2_5, eleven_flash_v2_5.",
-      "directory": ".agents/skills/elevenlabs-tts",
+      "directory": ".claude/skills/elevenlabs-tts",
       "language": "bash",
       "mainFile": "SKILL.md",
       "triggers": [
@@ -109,7 +110,7 @@
     "copywriting": {
       "name": "copywriting",
       "description": "Expert conversion copywriting for marketing pages — homepage, landing pages, pricing pages, feature pages, about pages, and product pages. Drives action through clear, compelling copy.",
-      "directory": ".agents/skills/copywriting",
+      "directory": ".claude/skills/copywriting",
       "language": "markdown",
       "mainFile": "SKILL.md",
       "triggers": [
@@ -143,185 +144,10 @@
         "path": "copywriting"
       }
     },
-    "frontend-design": {
-      "name": "frontend-design",
-      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Avoids generic 'AI slop' aesthetics. Generates creative, polished code with exceptional attention to typography, color, motion, and spatial composition.",
-      "directory": ".agents/skills/frontend-design",
-      "language": "markdown",
-      "mainFile": "SKILL.md",
-      "triggers": [
-        "build web component",
-        "build web page",
-        "build landing page",
-        "build dashboard",
-        "build application",
-        "build poster",
-        "build website",
-        "create web component",
-        "create web page",
-        "frontend",
-        "web interface",
-        "make this look good",
-        "beautify",
-        "design this"
-      ],
-      "relatedSkills": [
-        "web-design-guidelines",
-        "javascript-typescript-jest"
-      ],
-      "source": {
-        "type": "github",
-        "owner": "anthropics",
-        "repo": "skills",
-        "path": "frontend-design"
-      }
-    },
-    "web-design-guidelines": {
-      "name": "web-design-guidelines",
-      "description": "Review UI code for Web Interface Guidelines compliance. Checks accessibility, UX best practices, and design standards against Vercel's web interface guidelines.",
-      "directory": ".agents/skills/web-design-guidelines",
-      "language": "markdown",
-      "mainFile": "SKILL.md",
-      "triggers": [
-        "review my ui",
-        "check accessibility",
-        "audit design",
-        "review ux",
-        "check my site against best practices",
-        "web interface guidelines"
-      ],
-      "dependencies": [
-        "WebFetch (for fetching latest guidelines)"
-      ],
-      "relatedSkills": [
-        "frontend-design"
-      ],
-      "source": {
-        "type": "github",
-        "owner": "vercel-labs",
-        "repo": "agent-skills",
-        "path": "web-design-guidelines"
-      }
-    },
-    "javascript-typescript-jest": {
-      "name": "javascript-typescript-jest",
-      "description": "JavaScript and TypeScript testing with Jest. Covers test structure, mocking patterns, async testing, and integration with CI/CD pipelines.",
-      "directory": ".agents/skills/javascript-typescript-jest",
-      "language": "markdown",
-      "mainFile": "SKILL.md",
-      "triggers": [
-        "javascript",
-        "typescript",
-        "jest",
-        "test",
-        "testing",
-        "unit test",
-        "integration test",
-        "js",
-        "ts"
-      ],
-      "relatedSkills": [
-        "python-code-style",
-        "frontend-design"
-      ],
-      "source": {
-        "type": "github",
-        "owner": "github",
-        "repo": "awesome-copilot",
-        "path": "javascript-typescript-jest"
-      }
-    },
-    "mcp-builder": {
-      "name": "mcp-builder",
-      "description": "Comprehensive guide for building MCP (Model Context Protocol) servers in Python (FastMCP) or TypeScript (MCP SDK). Covers API design, tool registration, error handling, Zod/Pydantic validation, and evaluation creation.",
-      "directory": ".agents/skills/mcp-builder",
-      "language": "markdown",
-      "mainFile": "SKILL.md",
-      "triggers": [
-        "build mcp server",
-        "create mcp server",
-        "mcp server",
-        "model context protocol",
-        "fastmcp",
-        "mcp sdk",
-        "mcp tool",
-        "mcp resource",
-        "mcp prompt"
-      ],
-      "referenceFiles": [
-        "reference/node_mcp_server.md",
-        "reference/python_mcp_server.md",
-        "reference/mcp_best_practices.md",
-        "reference/evaluation.md",
-        "scripts/requirements.txt",
-        "scripts/connections.py",
-        "scripts/evaluation.py"
-      ],
-      "relatedSkills": [
-        "python-code-style",
-        "javascript-typescript-jest"
-      ],
-      "source": {
-        "type": "github",
-        "owner": "anthropics",
-        "repo": "skills",
-        "path": "mcp-builder"
-      }
-    },
-    "playwright-skill": {
-      "name": "playwright-skill",
-      "description": "General-purpose browser automation with Playwright. Auto-detects dev servers, writes scripts to /tmp, executes with visible browser. 442-line helper library with safeClick, safeType, screenshot, cookie handling, auth, and more.",
-      "directory": ".agents/skills/playwright-skill",
-      "language": "node.js",
-      "mainFile": "SKILL.md",
-      "entryPoints": {
-        "executor": "run.js",
-        "helpers": "lib/helpers.js",
-        "apiReference": "API_REFERENCE.md"
-      },
-      "triggers": [
-        "playwright",
-        "browser automation",
-        "automate browser",
-        "test page",
-        "screenshot",
-        "web scraping",
-        "ui test",
-        "e2e test",
-        "login flow",
-        "form test"
-      ],
-      "capabilities": [
-        "Dev server auto-detection",
-        "Visible and headless browser modes",
-        "Multi-viewport responsive testing",
-        "Form automation",
-        "Authentication flows",
-        "Cookie banner handling",
-        "Screenshot capture",
-        "Broken link checking",
-        "Custom HTTP headers",
-        "Network interception"
-      ],
-      "dependencies": [
-        "playwright ^1.57.0",
-        "chromium (via npx playwright install)"
-      ],
-      "relatedSkills": [
-        "javascript-typescript-jest",
-        "web-design-guidelines"
-      ],
-      "source": {
-        "type": "github",
-        "owner": "sickn33",
-        "repo": "antigravity-awesome-skills",
-        "path": "playwright-skill"
-      }
-    },
     "python-code-style": {
       "name": "python-code-style",
       "description": "Python code style, linting, formatting, naming conventions, and documentation standards. Covers ruff, mypy, pyright, Google-style docstrings, PEP 8, and project documentation.",
-      "directory": ".agents/skills/python-code-style",
+      "directory": ".claude/skills/python-code-style",
       "language": "markdown",
       "mainFile": "SKILL.md",
       "triggers": [
@@ -338,7 +164,7 @@
       ],
       "relatedSkills": [
         "mcp-builder",
-        "javascript-typescript-jest"
+        "interview"
       ],
       "source": {
         "type": "github",
@@ -347,43 +173,117 @@
         "path": "python-code-style"
       }
     },
-    "mcp-hub": {
-      "name": "mcp-hub",
-      "description": "MCP Hub server that exposes all bootlogix skills as queryable, invokable tools. Allows any MCP client to discover and use skills programmatically.",
-      "directory": ".agents/skills/mcp-hub",
-      "language": "typescript",
+    "remotion": {
+      "name": "remotion",
+      "description": "AI video production workflow using Remotion. Default workflow: Firecrawl brand scrape, create project, build scenes, start Remotion Studio, Cloudflare tunnel, user preview, render. Covers motion graphics principles, transcription overlays, type scale, tunnel management, and AI voiceover.",
+      "directory": ".claude/skills/remotion",
+      "language": "markdown",
       "mainFile": "SKILL.md",
-      "entryPoints": {
-        "executor": "dist/index.js",
-        "source": "src/index.ts"
-      },
+      "referenceFiles": [
+        "references/composition-patterns.md",
+        "references/components.md",
+        "scripts/remotion.sh",
+        "scripts/firecrawl.sh"
+      ],
       "triggers": [
-        "list bootlogix skills",
-        "search skills",
-        "show skill details",
-        "hub_list_skills",
-        "hub_search_skills",
-        "hub_show_skill"
-      ],
-      "capabilities": [
-        "List all skills by group or language",
-        "Search skills by keyword or trigger",
-        "Show full skill details with README content",
-        "List all skill groups",
-        "List all trigger phrases",
-        "Get related skills for any skill",
-        "List configured MCP servers"
-      ],
-      "dependencies": [
-        "@modelcontextprotocol/sdk ^1.6.1",
-        "zod ^3.23.8",
-        "express ^4.21.0"
+        "remotion",
+        "make a video",
+        "video composition",
+        "motion graphics",
+        "animated video",
+        "video editor",
+        "create video with remotion"
       ],
       "relatedSkills": [
-        "mcp-builder",
-        "python-code-style",
-        "javascript-typescript-jest"
-      ]
+        "ai-video-generation",
+        "elevenlabs-tts",
+        "remotion-best-practices"
+      ],
+      "source": {
+        "type": "github",
+        "owner": "inferen-sh",
+        "repo": "skills",
+        "path": "remotion"
+      }
+    },
+    "remotion-best-practices": {
+      "name": "remotion-best-practices",
+      "description": "37 Remotion rule files covering 3D, animations, assets, audio, audio-visualization, charts, compositions, display-captions, extract-frames, ffmpeg, fonts, gifs, images, lottie, maps, measuring-dom-nodes, measuring-text, sequencing, sfx, subtitles, tailwind, text-animations, timing, transitions, transparent-videos, trimming, videos, voiceover, and more.",
+      "directory": ".agents/skills/remotion-best-practices",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "remotion best practices",
+        "remotion rules",
+        "remotion animation",
+        "remotion composition",
+        "remotion captions",
+        "remotion audio",
+        "remotion video"
+      ],
+      "relatedSkills": [
+        "remotion",
+        "ai-video-generation"
+      ],
+      "source": {
+        "type": "github",
+        "owner": "remotion-dev",
+        "repo": "skills",
+        "path": "."
+      }
+    },
+    "interview": {
+      "name": "interview",
+      "description": "Discovery conversation skill — surfaces the WHY behind the WHAT before building anything. Covers the WHY+WHAT model, laddering technique, 5 whys, assumption categories, anti-patterns, and confirmation patterns.",
+      "directory": ".claude/skills/interview",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "referenceFiles": [
+        "references/question-patterns.md",
+        "references/anti-patterns.md",
+        "references/summary-templates.md"
+      ],
+      "triggers": [
+        "interview",
+        "discovery",
+        "understand the problem",
+        "why are we doing this",
+        "what problem does this solve",
+        "before building",
+        "clarify requirements",
+        "ask questions"
+      ],
+      "relatedSkills": [
+        "copywriting"
+      ],
+      "source": {
+        "type": "github",
+        "owner": "inferen-sh",
+        "repo": "skills",
+        "path": "interview"
+      }
+    },
+    "find-skills": {
+      "name": "find-skills",
+      "description": "Skill discovery guide — uses npx skills find, checks skills.sh leaderboard, verifies quality (install count, source reputation, GitHub stars), presents options with install commands.",
+      "directory": ".claude/skills/find-skills",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "find a skill",
+        "search skills",
+        "is there a skill for",
+        "how do i do x",
+        "skills marketplace",
+        "npx skills find"
+      ],
+      "relatedSkills": [],
+      "source": {
+        "type": "github",
+        "owner": "inferen-sh",
+        "repo": "skills",
+        "path": "find-skills"
+      }
     }
   },
   "skillGroups": {
@@ -392,36 +292,30 @@
       "skills": [
         "ai-video-generation",
         "elevenlabs-tts",
+        "remotion",
+        "remotion-best-practices",
         "copywriting"
       ]
     },
-    "frontend": {
-      "description": "Frontend design, implementation, and review",
+    "code-quality": {
+      "description": "Code style, linting, and development practices",
       "skills": [
-        "frontend-design",
-        "web-design-guidelines",
-        "javascript-typescript-jest"
+        "python-code-style"
       ]
     },
-    "mcp-development": {
-      "description": "Building and deploying MCP servers",
+    "research": {
+      "description": "Discovery and requirement gathering",
       "skills": [
-        "mcp-builder",
-        "python-code-style",
-        "javascript-typescript-jest"
-      ]
-    },
-    "browser-automation": {
-      "description": "Browser-based automation and testing",
-      "skills": [
-        "playwright-skill",
-        "web-design-guidelines"
+        "interview",
+        "find-skills"
       ]
     }
   },
   "conventions": {
     "filePaths": {
       "workspaceRoot": "/home/muhammad_tayyab/bootlogix",
+      "installedSkills": ".claude/skills",
+      "projectAgents": ".agents/skills",
       "tempFiles": "/tmp",
       "neverWriteTo": [
         "skill directories (write to /tmp instead)",

@@ -1,0 +1,108 @@
+{
+  "version": "1.0",
+  "video_title": "World's Smallest Bicycle",
+  "duration_seconds": 45,
+  "aspect_ratio": "9:16",
+  "format_notes": "Mobile-first, 9:16 vertical. All text in bottom 40% of frame (thumb-safe). No text in top-left (timestamp zone).",
+  "scenes": [
+    {
+      "scene_number": 1,
+      "timecode_start": "00:00",
+      "timecode_end": "00:05",
+      "description": "HOOK — Bold title card, black bg, white text",
+      "caption_id": [1, 2, 3],
+      "visuals": "Black screen, white text flies in. Caption flash every 2 seconds.",
+      "jump_cut": "text-only, no video needed",
+      "zoom_instruction": "static",
+      "music": "none — silence builds tension",
+      "transition_in": "hard cut from black",
+      "transition_out": "hard cut to scene 2"
+    },
+    {
+      "scene_number": 2,
+      "timecode_start": "00:05",
+      "timecode_end": "00:15",
+      "description": "REVEAL OPENER — AI footage of tiny bicycle",
+      "caption_id": [4, 5],
+      "visuals": "AI-generated: Extreme macro shot of tiny bicycle on palm. Sunlight, real-world setting.",
+      "jump_cut": "Cut every 2s — switch between wide palm shot and close-up bike",
+      "zoom_instruction": "Start wide (palm with tiny bike), zoom into chain/wheels at 00:08",
+      "music": "Bass drop cue at 00:10",
+      "transition_in": "hard cut",
+      "transition_out": "cut"
+    },
+    {
+      "scene_number": 3,
+      "timecode_start": "00:15",
+      "timecode_end": "00:25",
+      "description": "REVEAL MID — Scale comparison + specs",
+      "caption_id": [6, 7, 8],
+      "visuals": "Side-by-side: tiny bike next to smartphone. Then close-up of Sergey riding.",
+      "jump_cut": "Cut every 2.5s. Phone comparison at 00:18, rider at 00:21.",
+      "zoom_instruction": "Zoom IN on 8.4cm text (caption scale 1.3x matches visual zoom)",
+      "music": "Upbeat track, mid-tempo",
+      "transition_in": "cut",
+      "transition_out": "cut"
+    },
+    {
+      "scene_number": 4,
+      "timecode_start": "00:25",
+      "timecode_end": "00:38",
+      "description": "REVEAL CLIMAX — Riding in Moscow traffic",
+      "caption_id": [9, 10, 11, 12, 13],
+      "visuals": "Sergey riding through Moscow streets. Wide traffic shot. Close-up feet on pedals.",
+      "jump_cut": "Cut every 2s. Alternate: traffic wide → feet close-up → face → traffic",
+      "zoom_instruction": "Zoom OUT for traffic wide shot, ZOOM IN for feet close-up",
+      "music": "Peak energy — full beat drop at 00:38 'IN. REAL. TRAFFIC.'",
+      "transition_in": "cut",
+      "transition_out": "beat-matched cut"
+    },
+    {
+      "scene_number": 5,
+      "timecode_start": "00:38",
+      "timecode_end": "00:42",
+      "description": "STING — 5.3cm reveal (unofficial)",
+      "caption_id": [14, 15],
+      "visuals": "Screen split: 8.4cm bike | 5.3cm bike. Or text-only reveal.",
+      "jump_cut": "Single cut — split screen appears at 00:38",
+      "zoom_instruction": "No zoom — let the numbers speak",
+      "music": "Music drops out — silence for "NOT VERIFIED..."",
+      "transition_in": "hard cut",
+      "transition_out": "cut"
+    },
+    {
+      "scene_number": 6,
+      "timecode_start": "00:42",
+      "timecode_end": "00:45",
+      "description": "STING PAYOFF + OUTRO — "YET" + engagement CTA",
+      "caption_id": [16, 17, 18, 19],
+      "visuals": "Final title card: yellow/black. Then fade to outro card with 🔥 emoji.",
+      "jump_cut": "text-only scene",
+      "zoom_instruction": "static",
+      "music": "Music fades under outro",
+      "transition_in": "fade from previous scene",
+      "transition_out": "fade to black"
+    }
+  ],
+  "music_timeline": {
+    "track_1": {
+      "start": "00:00",
+      "end": "00:38",
+      "genre": "upbeat electronic / lo-fi viral beat",
+      "volume": "0.7",
+      "notes": "Royalty-free from YouTube Audio Library or Pixabay"
+    },
+    "track_2": {
+      "start": "00:38",
+      "end": "00:45",
+      "genre": "silence then soft beat",
+      "volume": "0.3",
+      "notes": "Drop at 'YET' — tension"
+    }
+  },
+  "transition_rules": {
+    "never_use": ["fade-to-black between every scene", "cross-dissolve"],
+    "prefer": ["hard cut", "beat-matched cut", "jump cut"],
+    "transitions_per_scene": 0
+  }
+}

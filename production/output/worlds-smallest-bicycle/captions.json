@@ -1,0 +1,199 @@
+{
+  "version": "1.0",
+  "video_title": "World's Smallest Bicycle",
+  "duration_seconds": 45,
+  "aspect_ratio": "9:16",
+  "captions": [
+    {
+      "id": 1,
+      "timestamp_start": "00:00-00:02",
+      "text": "THIS GUY RIDES A BICYCLE",
+      "position": "center",
+      "style": "hook",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "scale-in-fast"
+    },
+    {
+      "id": 2,
+      "timestamp_start": "00:02-00:04",
+      "text": "YOU CAN FIT IN YOUR PALM.",
+      "position": "center",
+      "style": "hook",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "scale-in-fast"
+    },
+    {
+      "id": 3,
+      "timestamp_start": "00:04-00:06",
+      "text": "NO CLICKBAIT. REAL. IN TRAFFIC.",
+      "position": "center",
+      "style": "hook",
+      "color": "#ff4444",
+      "background": "#000000",
+      "animation": "flash"
+    },
+    {
+      "id": 4,
+      "timestamp_start": "00:06-00:10",
+      "text": "SERGEY DASHEVSKY BUILT THE",
+      "position": "bottom-third",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "rgba(0,0,0,0.7)",
+      "animation": "fade-in"
+    },
+    {
+      "id": 5,
+      "timestamp_start": "00:10-00:14",
+      "text": "WORLD'S SMALLEST RIDEABLE BICYCLE.",
+      "position": "bottom-third",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "rgba(0,0,0,0.7)",
+      "animation": "fade-in"
+    },
+    {
+      "id": 6,
+      "timestamp_start": "00:14-00:18",
+      "text": "IT MEASURES JUST",
+      "position": "center",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "slide-up"
+    },
+    {
+      "id": 7,
+      "timestamp_start": "00:18-00:22",
+      "text": "8.4 CENTIMETERS.",
+      "position": "center",
+      "style": "reveal-number",
+      "color": "#ff4444",
+      "background": "#000000",
+      "animation": "scale-punch",
+      "scale": "1.3x"
+    },
+    {
+      "id": 8,
+      "timestamp_start": "00:22-00:26",
+      "text": "SMALLER THAN YOUR SMARTPHONE.",
+      "position": "center",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "fade-in"
+    },
+    {
+      "id": 9,
+      "timestamp_start": "00:26-00:30",
+      "text": "CHAIN CONNECTS BOTH WHEELS. FULL SADDLE. REAL BRAKES.",
+      "position": "bottom-third",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "rgba(0,0,0,0.7)",
+      "animation": "fade-in"
+    },
+    {
+      "id": 10,
+      "timestamp_start": "00:30-00:34",
+      "text": "HIS FEET HANG OFF THE PEDALS.",
+      "position": "center",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "fade-in"
+    },
+    {
+      "id": 11,
+      "timestamp_start": "00:34-00:38",
+      "text": "PURE BALANCE. NO BRAKES. NO GEARS.",
+      "position": "bottom-third",
+      "style": "reveal",
+      "color": "#ffffff",
+      "background": "rgba(0,0,0,0.7)",
+      "animation": "fade-in"
+    },
+    {
+      "id": 12,
+      "timestamp_start": "00:38-00:42",
+      "text": "AND HE RIDES IT THROUGH MOSCOW.",
+      "position": "center",
+      "style": "reveal-climax",
+      "color": "#ffcc00",
+      "background": "#000000",
+      "animation": "scale-punch"
+    },
+    {
+      "id": 13,
+      "timestamp_start": "00:42-00:46",
+      "text": "IN. REAL. TRAFFIC.",
+      "position": "center",
+      "style": "reveal-climax",
+      "color": "#ff4444",
+      "background": "#000000",
+      "animation": "flash-each-word"
+    },
+    {
+      "id": 14,
+      "timestamp_start": "00:46-00:50",
+      "text": "THE RECORD IS 8.4 CENTIMETERS.",
+      "position": "center",
+      "style": "sting",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "fade-in"
+    },
+    {
+      "id": 15,
+      "timestamp_start": "00:50-00:54",
+      "text": "BUT ONE BUILDER MADE ONE AT 5.3 CM.",
+      "position": "center",
+      "style": "sting",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "fade-in"
+    },
+    {
+      "id": 16,
+      "timestamp_start": "00:54-00:58",
+      "text": "NOT GUINNESS VERIFIED...",
+      "position": "center",
+      "style": "sting",
+      "color": "#ff4444",
+      "background": "#000000",
+      "animation": "scale-in-slow"
+    },
+    {
+      "id": 17,
+      "timestamp_start":  "00:58-01:02",
+      "text": "YET.",
+      "position": "center",
+      "style": "sting-payoff",
+      "color": "#ffcc00",
+      "background": "#000000",
+      "animation": "scale-punch"
+    },
+    {
+      "id": 18,
+      "timestamp_start": "01:02-01:08",
+      "text": "WOULD YOU RIDE A BIKE THIS SMALL?",
+      "position": "center",
+      "style": "outro",
+      "color": "#ffffff",
+      "background": "#000000",
+      "animation": "fade-in"
+    },
+    {
+      "id": 19,
+      "timestamp_start": "01:08-01:12",
+      "text": "DROP A 🔥 FOR MORE WORLD-RECORD WEIRDNESS",
+      "position": "bottom-third",
+      "style": "outro",
+      "color": "#ffffff",
+      "background": "rgba(0,0,0,0.8)",
+      "animation": "fade-in"
+    }
+  ]
+}
