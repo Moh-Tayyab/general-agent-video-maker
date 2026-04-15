@@ -1,6 +1,16 @@
 {
   "version": 1,
   "skills": {
+    "after-effects": {
+      "source": "dylantarre/animation-principles",
+      "sourceType": "github",
+      "computedHash": "a2d0df968fcbc07469823c72c1f724d854e2ca6a0d94f3e07d183098741cebbc"
+    },
+    "agent-browser": {
+      "source": "vercel-labs/agent-browser",
+      "sourceType": "github",
+      "computedHash": "91782f423f6fad0fe4e2159350f2eb8c3cf66cfa4d2387b2c8d927d443c9a603"
+    },
     "ai-video-generation": {
       "source": "inferen-sh/skills",
       "sourceType": "github",
@@ -36,6 +46,11 @@
       "sourceType": "github",
       "computedHash": "fc68038c900eb801f73ff96130c9f9dba533cc94212ed8435833242f196dedcf"
     },
+    "playwright-cli": {
+      "source": "microsoft/playwright-cli",
+      "sourceType": "github",
+      "computedHash": "f75195249064c00f8cc69f8df10b947ea09196a78b784c1356dd032e1bf67a36"
+    },
     "playwright-skill": {
       "source": "sickn33/antigravity-awesome-skills",
       "sourceType": "github",
@@ -50,6 +65,16 @@
       "source": "remotion-dev/skills",
       "sourceType": "github",
       "computedHash": "2f673b7710813ac07c71c0a54657f740078aec6585f15edf351494499e1f9ac3"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "computedHash": "1eef04180a5278a6869fab117c75fa2acf512bfda0a4b16569409b88b7bcb343"
+    },
+    "skill-creator": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "b122f4d1e91aa1d83027e050b5b37c3156203ee85458d7b1360bc48167c9e02a"
     },
     "web-design-guidelines": {
       "source": "vercel-labs/agent-skills",
