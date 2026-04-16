@@ -3,3 +3,9 @@ __pycache__/
 .env
 node_modules/
 .DS_Store
+
+# Production secrets (OAuth tokens — never commit)
+production/secrets/
+
+# Output videos (large binary files)
+production/output/
