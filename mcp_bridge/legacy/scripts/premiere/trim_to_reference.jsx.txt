@@ -1,0 +1,9 @@
+# Production JSX Scripts Directory
+# These scripts are the final payloads delivered to Adobe software.
+
+## 1. Premiere Pro: trim_to_reference.jsx
+Logic:
+- Import raw footage.
+- Analyze reference audio track.
+- Perform cuts where audio peaks match reference markers.
+- Move trimmed clips to the main timeline.

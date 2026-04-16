@@ -1,0 +1,105 @@
+{
+  "skills": {
+    "ai-video-generation": {
+      "version": "1.0.0",
+      "description": "AI video generation via inference.sh CLI",
+      "triggers": [
+        "video generation",
+        "ai video",
+        "text to video",
+        "generate video"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "copywriting": {
+      "version": "1.0.0",
+      "description": "Conversion copywriting for marketing pages",
+      "triggers": [
+        "write copy",
+        "marketing copy",
+        "landing page copy"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "elevenlabs-tts": {
+      "version": "1.0.0",
+      "description": "Premium TTS with 22+ voices via inference.sh CLI",
+      "triggers": [
+        "elevenlabs tts",
+        "premium tts",
+        "ai voice"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "find-skills": {
+      "version": "1.0.0",
+      "description": "Discover and install agent skills from the ecosystem",
+      "triggers": [
+        "find a skill",
+        "how do i do"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "interview": {
+      "version": "1.0.0",
+      "description": "Discovery conversations to understand user intent",
+      "triggers": [
+        "/interview",
+        "brainstorm",
+        "clarify"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "remotion": {
+      "version": "1.0.0",
+      "description": "Programmatic video production with Remotion",
+      "triggers": [
+        "make video",
+        "remotion",
+        "motion graphics"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "youtube-audio-analyzer": {
+      "version": "1.0.0",
+      "description": "Extract audio from YouTube and analyze via Gemini",
+      "triggers": [
+        "analyze youtube audio",
+        "youtube transcript"
+      ],
+      "tools": [],
+      "dependencies": [],
+      "related_skills": []
+    },
+    "maven-edit": {
+      "version": "1.0.0",
+      "description": "Re-edit raw video clips in Maven-Edit style: 9:16 crop, cinematic grade, BG music ducking, word-by-word karaoke captions",
+      "triggers": [
+        "maven edit",
+        "make it like maven edits",
+        "re-edit this clip",
+        "linear wipe transition",
+        "reaction video captions",
+        "add karaoke captions"
+      ],
+      "tools": [
+        "Bash(ffmpeg *)",
+        "Bash(infsh *)"
+      ],
+      "dependencies": [],
+      "related_skills": []
+    }
+  }
+}

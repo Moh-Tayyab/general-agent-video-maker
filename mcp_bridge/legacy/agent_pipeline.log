@@ -1,0 +1,44 @@
+2026-04-14 12:23:30,136 - Orchestrator - INFO - Initialized project Video_01_Test
+2026-04-14 12:23:30,138 - Orchestrator - INFO - Starting pipeline for project: Video_01_Test
+2026-04-14 12:23:30,138 - Orchestrator - INFO - Processing Step 1: VideoEditingSpecialist
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Executing skill: trim_video with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: trim_to_reference.jsx
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Skill trim_video passed validation.
+2026-04-14 12:23:30,138 - Orchestrator - INFO - Skill trim_video completed. Artifact: project/Video01_RoughCut_v1.prproj
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Executing skill: integrate_audio with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: mix_bg_music.jsx
+2026-04-14 12:23:30,138 - VideoEditingSpecialist - INFO - Skill integrate_audio passed validation.
+2026-04-14 12:23:30,138 - Orchestrator - INFO - Skill integrate_audio completed. Artifact: project/Video01_AudioMix_v1.prproj
+2026-04-14 12:23:30,138 - Orchestrator - ERROR - Step 1 failed quality gate. Retrying...
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Executing skill: trim_video with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: trim_to_reference.jsx
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Skill trim_video passed validation.
+2026-04-14 12:23:30,139 - Orchestrator - INFO - Skill trim_video completed. Artifact: project/Video01_RoughCut_v1.prproj
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Executing skill: integrate_audio with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: mix_bg_music.jsx
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Skill integrate_audio passed validation.
+2026-04-14 12:23:30,139 - Orchestrator - INFO - Skill integrate_audio completed. Artifact: project/Video01_AudioMix_v1.prproj
+2026-04-14 12:23:30,139 - Orchestrator - ERROR - Step 1 failed quality gate. Retrying...
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Executing skill: trim_video with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: trim_to_reference.jsx
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Skill trim_video passed validation.
+2026-04-14 12:23:30,139 - Orchestrator - INFO - Skill trim_video completed. Artifact: project/Video01_RoughCut_v1.prproj
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Executing skill: integrate_audio with params: {'project_id': 'Video_01_Test'}
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Calling Premiere Pro ExtendScript: mix_bg_music.jsx
+2026-04-14 12:23:30,139 - VideoEditingSpecialist - INFO - Skill integrate_audio passed validation.
+2026-04-14 12:23:30,139 - Orchestrator - INFO - Skill integrate_audio completed. Artifact: project/Video01_AudioMix_v1.prproj
+2026-04-14 12:23:30,139 - Orchestrator - ERROR - Step 1 failed quality gate. Retrying...
+2026-04-14 12:23:30,139 - Orchestrator - ERROR - Project Video_01_Test failed after 3 retries at step 1
+2026-04-14 13:18:16,333 - Orchestrator - INFO - Executing TTS skill with payload: text='Narration: Welcome to the future of AI. Visual: A glowing brain.' voice='bella' model='eleven_multilingual_v2' stability=0.5 similarity_boost=0.75 style=0.3
+2026-04-14 13:18:16,342 - Orchestrator - INFO - Executing VIDEO skill with payload: []
+2026-04-14 14:34:23,053 - Orchestrator - INFO - Surgically reset scene_2_video due to: Character is missing glasses
+2026-04-14 15:25:48,749 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/premiere
+2026-04-14 15:25:48,754 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/aftereffects
+2026-04-14 15:25:48,755 - AdobeBridge - INFO - Successfully wrote JSX command to /home/muhammad_tayyab/AdobeBridge/premiere/test_trim.jsx
+2026-04-14 15:25:48,756 - AdobeBridge - INFO - Successfully wrote JSX command to /home/muhammad_tayyab/AdobeBridge/aftereffects/test_cap.jsx
+2026-04-14 15:34:23,877 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/premiere
+2026-04-14 15:34:23,877 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/aftereffects
+2026-04-14 15:34:23,878 - TimingBridge - INFO - Extracting timing from reference video: /tmp/ref_video.mp4
+2026-04-14 15:35:02,972 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/premiere
+2026-04-14 15:35:02,972 - AdobeBridge - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/aftereffects
+2026-04-14 15:35:02,972 - TimingBridge - INFO - Extracting timing from reference video: /tmp/ref_video.mp4

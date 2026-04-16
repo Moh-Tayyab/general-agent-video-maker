@@ -1,7 +1,7 @@
 # bootlogix — Workspace Constitution
 
 > Authored: 2026-04-07
-> Version: 1.1.0
+> Version: 1.2.0
 > Type: Personal workspace constitution (SDD-compliant)
 
 ---
@@ -128,6 +128,42 @@ Full details are in **`bootlogix-video-constitution.md`**. That document is the 
 
 ---
 
+## 6.5 Team Architecture (Video Pipeline)
+
+For multi-agent video production workflows, the workspace uses Claude Code's native team system.
+
+### Team: `video-pipeline`
+
+| Member | Agent Type | Phase | Skills |
+|--------|-----------|-------|--------|
+| `orchestrator` | team-lead | Coordinator | — |
+| `researcher` | general-purpose | SEARCH | `find-skills`, `mcp__youtube-shorts-transcript-extractor` |
+| `scriptwriter` | general-purpose | SCRIPT | `copywriting`, `elevenlabs-tts` |
+| `visual-designer` | general-purpose | DESIGN | `ai-video-generation` |
+| `producer` | general-purpose | GENERATE | `remotion`, `remotion-best-practices`, `elevenlabs-tts`, `ai-video-generation` |
+
+### Agent Prompts
+Located in `agents/prompts/`:
+- `researcher_agent.py` → `RESEARCHER_PROMPT`
+- `scriptwriter_agent.py` → `SCRIPTWRITER_PROMPT`
+- `visual_designer_agent.py` → `VISUAL_DESIGNER_PROMPT`
+- `producer_agent.py` → `PRODUCER_PROMPT`
+- `video-orchestrator.md` → Full orchestrator coordination guide
+
+### Coordination Protocol
+1. `TaskCreate` — create one task per SSD phase
+2. `Agent(team_name="video-pipeline", name="...", taskId=X)` — spawn phase agent
+3. `SendMessage` — agents report completion back to orchestrator
+4. `TaskUpdate` — mark tasks in_progress/completed
+
+### Production Utilities
+Adobe-specific JSX generation and quality validation live in `production/`:
+- `production/adobe/jsx_gen.py` — Premiere/AE JSX drop-zone bridge
+- `production/bridges/payload.py` — TTS and video prompt preparation
+- `production/validation/quality.py` — quality gates via ffprobe
+
+---
+
 ## 7. Conventions
 
 ### File Paths
@@ -197,3 +233,4 @@ What stays local (not committed):
 |---------|------|--------|
 | 1.0.0 | 2026-04-07 | Initial workspace constitution |
 | 1.1.0 | 2026-04-07 | SDD-compliant rewrite — added phase flow, prompt patterns, skill map, artifact ownership |
+| 1.2.0 | 2026-04-15 | Native Claude Code team architecture — video-pipeline team, agent prompts, production utilities |

@@ -1,0 +1,19 @@
+{
+  "name": "tom-cruise-shorts",
+  "scripts": {
+    "dev": "npx remotion studio",
+    "build": "npx remotion bundle",
+    "render": "npx remotion render TomCruiseShorts out/final.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.293",
+    "react": "^19",
+    "react-dom": "^19",
+    "remotion": "4.0.293",
+    "lucide-react": "^0.400"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
+}

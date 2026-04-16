@@ -1,0 +1,48 @@
+[Script Info]
+Title: Tom Cruise Cinematic Shorts
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: Main,Bangers,96,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,5,0,2,10,10,480,1
+Style: Highlight,Bangers,96,&H00FFFF00,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,5,0,2,10,10,480,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+
+Dialogue: 0,0:00:00.00,0:00:01.50,Main,,0,0,0,,{\k1350}MISSION
+Dialogue: 0,0:00:01.30,0:00:02.79,Highlight,,0,0,0,,{\k1349}IMPOSSIBLE
+Dialogue: 0,0:00:02.60,0:00:04.00,Main,,0,0,0,,{\k419}HE {\k419}HAS {\k419}ARRIVED
+Dialogue: 0,0:00:03.79,0:00:05.00,Highlight,,0,0,0,,{\k540}TOM {\k540}CRUISE
+Dialogue: 0,0:00:05.00,0:00:06.50,Main,,0,0,0,,{\k450}WHEN {\k450}YOU {\k450}THINK
+Dialogue: 0,0:00:06.29,0:00:07.79,Highlight,,0,0,0,,{\k674}HE {\k674}CAN'T
+Dialogue: 0,0:00:07.59,0:00:09.00,Main,,0,0,0,,{\k315}HE {\k314}DOES {\k314}IT {\k314}ANYWAY
+Dialogue: 0,0:00:08.80,0:00:10.00,Highlight,,0,0,0,,{\k539}NO {\k539}CGI
+Dialogue: 0,0:00:09.80,0:00:11.50,Main,,0,0,0,,{\k765}ALL {\k764}STUNTS
+Dialogue: 0,0:00:11.30,0:00:12.80,Highlight,,0,0,0,,{\k675}ALL {\k675}HIM
+Dialogue: 0,0:00:12.00,0:00:13.50,Main,,0,0,0,,{\k675}THE {\k675}MISSION
+Dialogue: 0,0:00:13.30,0:00:14.50,Highlight,,0,0,0,,{\k539}STARTS {\k539}NOW
+Dialogue: 0,0:00:14.30,0:00:15.50,Main,,0,0,0,,{\k1080}INFILTRATING
+Dialogue: 0,0:00:15.30,0:00:16.80,Highlight,,0,0,0,,{\k1350}RUSSIA
+Dialogue: 0,0:00:16.60,0:00:18.00,Main,,0,0,0,,{\k419}HE {\k419}DOESN'T {\k419}STOP
+Dialogue: 0,0:00:17.80,0:00:19.50,Highlight,,0,0,0,,{\k1529}EVER
+Dialogue: 0,0:00:20.00,0:00:21.19,Main,,0,0,0,,{\k539}PURE {\k539}ACTION
+Dialogue: 0,0:00:21.00,0:00:22.50,Highlight,,0,0,0,,{\k675}NO {\k675}BRAKES
+Dialogue: 0,0:00:22.30,0:00:23.80,Main,,0,0,0,,{\k1350}EXTREME
+Dialogue: 0,0:00:23.60,0:00:25.00,Highlight,,0,0,0,,{\k1259}INTENSITY
+Dialogue: 0,0:00:24.80,0:00:26.00,Main,,0,0,0,,{\k539}HE'S {\k539}UNSTOPPABLE
+Dialogue: 0,0:00:25.80,0:00:27.50,Highlight,,0,0,0,,{\k1529}LEGEND
+Dialogue: 0,0:00:30.00,0:00:31.50,Main,,0,0,0,,{\k675}NEXT {\k675}LEVEL
+Dialogue: 0,0:00:31.30,0:00:32.79,Highlight,,0,0,0,,{\k1349}FASTER
+Dialogue: 0,0:00:32.60,0:00:34.00,Main,,0,0,0,,{\k1259}STRONGER
+Dialogue: 0,0:00:33.79,0:00:35.50,Highlight,,0,0,0,,{\k765}THAN {\k765}ANYONE
+Dialogue: 0,0:00:35.29,0:00:37.00,Main,,0,0,0,,{\k765}THE {\k765}FALL
+Dialogue: 0,0:00:36.79,0:00:38.50,Highlight,,0,0,0,,{\k382}BUT {\k382}HE {\k382}GETS {\k382}UP
+Dialogue: 0,0:00:40.00,0:00:41.50,Main,,0,0,0,,{\k674}THE {\k674}ULTIMATE
+Dialogue: 0,0:00:41.29,0:00:42.50,Highlight,,0,0,0,,{\k1080}MISSION
+Dialogue: 0,0:00:42.29,0:00:43.50,Main,,0,0,0,,{\k539}TOM {\k539}CRUISE
+Dialogue: 0,0:00:43.29,0:00:44.50,Highlight,,0,0,0,,{\k1080}IRREPLACEABLE
+Dialogue: 0,0:00:44.29,0:00:45.00,Main,,0,0,0,,{\k314}THE {\k315}END

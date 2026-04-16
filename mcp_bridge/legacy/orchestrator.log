@@ -1,0 +1,3 @@
+2026-04-14 15:41:08,461 - [ORCHESTRATOR] - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/premiere
+2026-04-14 15:41:08,463 - [ORCHESTRATOR] - INFO - Ensured bridge directory exists: /home/muhammad_tayyab/AdobeBridge/aftereffects
+2026-04-14 15:41:08,464 - [ORCHESTRATOR] - INFO - Extracting timing from reference video: /tmp/ref_video.mp4

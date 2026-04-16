@@ -1,0 +1,7 @@
+# Production JSX Scripts Directory
+# la Logic:
+- Import the final composition.
+- Add a new Adjustment Layer on top of all layers.
+- Apply the Lumetri Color effect.
+- Load the specified .cube LUT file.
+- Set intensity to 80%.

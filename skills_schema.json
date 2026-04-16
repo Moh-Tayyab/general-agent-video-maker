@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentSkillSchema",
+  "description": "Standard interface for all skills within the Video Automation Pipeline.",
+  "type": "object",
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "description": "Unique identifier for the skill (e.g., 'trim_video')."
+    },
+    "agent_owner": {
+      "type": "string",
+      "enum": ["VideoEditingSpecialist", "AIEnhancementSpecialist", "GraphicsAndVFXSpecialist"],
+      "description": "The agent responsible for executing this skill."
+    },
+    "input_parameters": {
+      "type": "object",
+      "description": "The required parameters for the skill to run."
+    },
+    "execution_logic": {
+      "type": "string",
+      "description": "Reference to the function or MCP tool call that performs the action."
+    },
+    "validation_criteria": {
+      "type": "object",
+      "properties": {
+        "check_type": { "type": "string", "description": "e.g., 'file_exists', 'resolution_check', 'audio_level_check'" },
+        "expected_value": { "type": "string" }
+      },
+      "required": ["check_type", "expected_value"]
+    },
+    "output_format": {
+      "type": "object",
+      "properties": {
+        "artifact_path": { "type": "string" },
+        "metadata": { "type": "object" }
+      },
+      "required": ["artifact_path"]
+    }
+  },
+  "required": ["skill_id", "agent_owner", "input_parameters", "execution_logic", "validation_criteria", "output_format"]
+}

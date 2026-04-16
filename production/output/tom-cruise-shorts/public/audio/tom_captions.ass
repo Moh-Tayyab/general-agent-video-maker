@@ -1,0 +1,34 @@
+[Script Info]
+Title: Tom Cruise Shorts Captions
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name,Fontname,Fontsize,PrimaryColour,SecondaryColour,OutlineColour,BackColour,Bold,Italic,Underline,StrikeOut,ScaleX,ScaleY,Spacing,Angle,BorderStyle,Outline,Shadow,Alignment,MarginL,MarginR,MarginV,Encoding
+Style: MavenMain,Bangers,96,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,10,10,480,1
+Style: MavenHighlight,Bangers,96,&H0002C8F5,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,10,10,480,1
+
+[Events]
+Format: Layer,Start,End,Style,Name,MarginL,MarginR,MarginV,Effect,Text
+Dialogue: 0,0:00:00.00,0:00:02.50,MavenMain,,0,0,0,,{\k2500}MISSION
+Dialogue: 0,0:00:02.50,0:00:05.00,MavenMain,,0,0,0,,{\k2500}IMPOSSIBLE
+Dialogue: 0,0:00:05.00,0:00:08.00,MavenHighlight,,0,0,0,,{\k1500}RUSSIA{\k1500}INFILTRATION
+Dialogue: 0,0:00:07.50,0:00:09.00,MavenMain,,0,0,0,,{\k750}TOM{\k750}CRUISE
+Dialogue: 0,0:00:09.00,0:00:11.50,MavenHighlight,,0,0,0,,{\k1250}CRAZY{\k1250}STUNTS
+Dialogue: 0,0:00:11.50,0:00:14.00,MavenMain,,0,0,0,,{\k1250}PURE{\k1250}ACTION
+Dialogue: 0,0:00:14.00,0:00:17.00,MavenHighlight,,0,0,0,,{\k1500}NO{\k1500}CGI
+Dialogue: 0,0:00:17.00,0:00:19.00,MavenMain,,0,0,0,,{\k1000}ALL{\k1000}HIM
+Dialogue: 0,0:00:18.00,0:00:21.00,MavenMain,,0,0,0,,{\k3000}INFILTRATING
+Dialogue: 0,0:00:21.00,0:00:24.00,MavenHighlight,,0,0,0,,{\k1000}THE{\k1000}MISSION{\k1000}BEGINS
+Dialogue: 0,0:00:24.00,0:00:27.00,MavenMain,,0,0,0,,{\k1000}HE{\k1000}NEVER{\k1000}QUITS
+Dialogue: 0,0:00:27.00,0:00:30.00,MavenHighlight,,0,0,0,,{\k3000}EXTREME
+Dialogue: 0,0:00:30.00,0:00:33.00,MavenMain,,0,0,0,,{\k1500}THE{\k1500}FALL
+Dialogue: 0,0:00:33.00,0:00:36.00,MavenHighlight,,0,0,0,,{\k750}BUT{\k750}HE{\k750}GETS{\k750}UP
+Dialogue: 0,0:00:36.00,0:00:39.00,MavenMain,,0,0,0,,{\k1500}NEXT{\k1500}LEVEL
+Dialogue: 0,0:00:39.00,0:00:42.00,MavenHighlight,,0,0,0,,{\k3000}INTENSITY
+Dialogue: 0,0:00:42.00,0:00:45.00,MavenMain,,0,0,0,,{\k1500}UNSTOPPABLE{\k1500}FORCE
+Dialogue: 0,0:00:45.00,0:00:48.00,MavenHighlight,,0,0,0,,{\k1500}FINAL{\k1500}MOMENT
+Dialogue: 0,0:00:48.00,0:00:51.00,MavenMain,,0,0,0,,{\k1500}THE{\k1500}CRUISE
+Dialogue: 0,0:00:51.00,0:00:54.00,MavenHighlight,,0,0,0,,{\k3000}IRREPLACEABLE

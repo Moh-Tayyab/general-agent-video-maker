@@ -1,0 +1,38 @@
+{
+  "workflow_id": "YT_SHORTS_SSD_PIPELINE_V2",
+  "description": "Agentic SSD Pipeline for Viral Shorts: Search -> Script -> Design -> Generate",
+  "ssd_phases": [
+    {
+      "name": "SEARCH",
+      "agent": "researcher",
+      "description": "Discovery and transcript extraction from source content.",
+      "required_artifacts": ["transcript", "source_urls"],
+      "dependencies": [],
+      "gate": "Verify transcript accuracy and source relevance"
+    },
+    {
+      "name": "SCRIPT",
+      "agent": "scriptwriter",
+      "description": "Conversion of research into a viral narrative script.",
+      "required_artifacts": ["script_md", "narration_text"],
+      "dependencies": ["SEARCH"],
+      "gate": "Verify narrative hook and pacing"
+    },
+    {
+      "name": "DESIGN",
+      "agent": "visual-designer",
+      "description": "Visual mapping of the script to scenes and asset requirements.",
+      "required_artifacts": ["storyboard_json", "asset_list"],
+      "dependencies": ["SCRIPT"],
+      "gate": "Verify visual consistency and asset availability"
+    },
+    {
+      "name": "GENERATE",
+      "agent": "producer",
+      "description": "Production of VO, AI video clips, and Remotion composition.",
+      "required_artifacts": ["voiceover_wav", "footage_clips", "remotion_project", "final_render"],
+      "dependencies": ["SCRIPT", "DESIGN"],
+      "gate": "Final quality check of rendered output"
+    }
+  ]
+}

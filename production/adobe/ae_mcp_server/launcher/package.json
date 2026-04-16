@@ -1,0 +1,9 @@
+{
+  "name": "start-ae-mcp",
+  "version": "1.0.0",
+  "description": "Launch After Effects, wait for it to start, then run the AE MCP server",
+  "scripts": {
+    "start": "osascript -e 'tell application \"Adobe After Effects 2024\" to activate' && node ../index.js"
+  },
+  "dependencies": {}
+}

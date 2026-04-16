@@ -1,0 +1,12 @@
+# Production JSX Scripts Directory
+# These scripts are the final payloads delivered to Adobe software.
+
+## 2. After Effects: create_srt_overlays.jsx
+Logic:
+- Read the generated .srt file.
+- Create a new Composition.
+- For each SRT entry:
+    - Create a Text Layer.
+    - Set start/end time based on timestamp.
+    - Apply the a-defined "Shorts Style" preset (Bold, Center, Yellow).
+- Align all captions to the "Safe Area" for YouTube Shorts.
