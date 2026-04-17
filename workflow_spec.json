@@ -1,10 +1,11 @@
 {
-  "workflow_id": "YT_SHORTS_SSD_PIPELINE_V2",
+  "workflow_id": "YT_SHORTS_SSD_PIPELINE_V2.1",
   "description": "Agentic SSD Pipeline for Viral Shorts: Search -> Script -> Design -> Generate",
   "ssd_phases": [
     {
       "name": "SEARCH",
       "agent": "researcher",
+      "skills": ["find-skills", "playwright-youtube-shorts", "youtube-audio-analyzer"],
       "description": "Discovery and transcript extraction from source content.",
       "required_artifacts": ["transcript", "source_urls"],
       "dependencies": [],
@@ -13,6 +14,7 @@
     {
       "name": "SCRIPT",
       "agent": "scriptwriter",
+      "skills": ["copywriting", "elevenlabs-tts"],
       "description": "Conversion of research into a viral narrative script.",
       "required_artifacts": ["script_md", "narration_text"],
       "dependencies": ["SEARCH"],
@@ -21,6 +23,7 @@
     {
       "name": "DESIGN",
       "agent": "visual-designer",
+      "skills": ["ai-video-generation"],
       "description": "Visual mapping of the script to scenes and asset requirements.",
       "required_artifacts": ["storyboard_json", "asset_list"],
       "dependencies": ["SCRIPT"],
@@ -29,10 +32,20 @@
     {
       "name": "GENERATE",
       "agent": "producer",
+      "skills": ["remotion", "maven-edit", "after-effects", "elevenlabs-tts", "ai-video-generation"],
       "description": "Production of VO, AI video clips, and Remotion composition.",
       "required_artifacts": ["voiceover_wav", "footage_clips", "remotion_project", "final_render"],
       "dependencies": ["SCRIPT", "DESIGN"],
       "gate": "Final quality check of rendered output"
+    },
+    {
+      "name": "CRITIQUE",
+      "agent": "critique",
+      "skills": ["quality_validate", "quality_report"],
+      "description": "Automated and AI-driven QA of the final render.",
+      "required_artifacts": ["qa_report"],
+      "dependencies": ["GENERATE"],
+      "gate": "Verify constitution compliance and readability"
     }
   ]
 }

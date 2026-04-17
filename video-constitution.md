@@ -1,4 +1,4 @@
-# Bootlogix Video Constitution
+# Video Constitution
 
 > Authored: 2026-04-15
 > Version: 1.0.0

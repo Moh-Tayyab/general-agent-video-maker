@@ -99,6 +99,32 @@ class RenderBridge:
             logger.error(f"Burn captions failed: {e.stderr}")
             return RenderResult(False, "", 0.0, f"ffmpeg burn failed: {e.stderr}")
 
+    def start_background_burn(
+        self,
+        video_path: str,
+        ass_path: str,
+        project_id: str,
+        output_name: str = "final_video.mp4",
+        quality: str = "high"
+    ) -> str:
+        """
+        Starts a background ffmpeg process and returns the PID file path.
+        """
+        project_dir = os.path.join(self.workspace, project_id)
+        os.makedirs(project_dir, exist_ok=True)
+        output_path = os.path.join(project_dir, output_name)
+        pid_file = os.path.join(project_dir, f"{output_name}.pid")
+        log_file = os.path.join(project_dir, f"{output_name}.log")
+
+        crf_map = {"high": "17", "medium": "20", "fast": "23"}
+        crf = crf_map.get(quality, "18")
+
+        # Full command to run in background
+        cmd = f"nohup {self.ffmpeg} -y -i {video_path} -vf ass={ass_path} -c:v libx264 -preset fast -crf {crf} -c:a aac -b:a 192k -r 30 {output_path} > {log_file} 2>&1 & echo $! > {pid_file}"
+        
+        subprocess.run(cmd, shell=True, check=True)
+        return pid_file
+
     def encode_from_frames(
         self,
         frames_dir: str,

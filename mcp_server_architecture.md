@@ -1,28 +1,37 @@
 # MCP Server Architecture: Video Automation Bridge
 
 ## 1. Overview
-The Video Automation Bridge is a Python-based MCP server that acts as the translation layer between the Orchestrator Agent's high-level intents (e.g., "upscale this video") and the low-level software execution (CLI commands, XML project manipulation, or Python scripting APIs).
+The Video Automation Bridge is a Python-based MCP server that acts as the translation layer between the Orchestrator Agent's high-level intents (e.g., "upscale this video") and the low-level software execution. It also manages the **SSD Pipeline State** (Search -> Script -> Design -> Generate) via a persistent project manifest system.
 
 ## 2. Technical Stack
 - **Language**: Python 3.12+
 - **Protocol**: Model Context Protocol (MCP)
 - **Communication**: stdio (Standard Input/Output)
-- **Execution Methods**:
-    - **Adobe Premiere/AE**: ExtendScript (via `.jsx` files) and XML (`.prproj` / `.aep` manipulation).
-    - **Topaz AI**: CLI parameters (where available) or automation of the Topaz AI executable.
-    - **OS Level**: `subprocess` for file movement and shell execution.
+- **State Management**: JSON-based `ProjectManifest` tracked via `ManifestManager`.
 
 ## 3. Component Diagram
-`Orchestrator` $\rightarrow$ `MCP Server` $\rightarrow$ `Skill Dispatcher` $\rightarrow$ `Software-Specific Wrapper` $\rightarrow$ `Local Software`
+`Orchestrator` $\leftrightarrow$ `MCP Server` $\leftrightarrow$ `ManifestTool` $\leftrightarrow$ `Disk Storage`
+                          $\downarrow$
+                  `Skill Dispatcher` $\rightarrow$ `Bridges` $\rightarrow$ `Local Software / CLI`
 
-### 3.1 Software-Specific Wrappers
-- **PremiereWrapper**: Handles `.jsx` script injection for rough cuts and audio mixing.
-- **TopazWrapper**: Manages profiles and triggers the upscale process.
-- **AEWrapper**: Generates SRT overlays and handles the render queue.
+### 3.1 Core Components
+- **ManifestTool**: High-level interface for project initialization, phase transitions, and artifact recording.
+- **Bridges**: Specialist wrappers for YouTube, Captions (ElevenLabs/ASS), Render (FFmpeg), and Topaz AI.
+- **AdobeBridge**: Handles JSX generation and delivery to Adobe software via drop-zones.
 
 ## 4. API Endpoints (MCP Tools)
-The server will expose the following tools to Claude:
-- `run_premiere_skill(skill_id, params)`: Executes a Premiere-specific task.
-- `run_topaz_skill(skill_id, params)`: Executes a Topaz-specific task.
-- `run_ae_skill(skill_id, params)`: Executes an After Effects-specific task.
-- `validate_artifact(file_path, check_type)`: Verifies if the output file meets the Constitution's quality gates.
+
+### 4.1 Project Management (SSD Pipeline)
+- `project_init(project_id, metadata)`: Start a new production project.
+- `project_get_state(project_id)`: Get current phase, status, and artifacts.
+- `project_record_artifact(project_id, phase, key, content)`: Record a file or data artifact.
+- `project_transition_phase(project_id, target_phase)`: Move to the next SSD phase.
+- `project_complete_phase(project_id)`: Mark the current phase as completed.
+
+### 4.2 Production Tools
+- `youtube_upload(...)`: Direct upload to YouTube via API.
+- `caption_transcribe(...)`: STT and timing extraction.
+- `caption_generate_ass(...)`: Maven-style karaoke caption generation.
+- `render_burn_captions(...)`: FFmpeg-based caption burn-in.
+- `topaz_upscale(...)`: AI resolution enhancement.
+- `quality_validate(...)`: Automated quality gate checks.

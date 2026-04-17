@@ -89,7 +89,7 @@ For complex multi-step tasks, designate the main agent as orchestrator and subag
 
 ### Skill Directory Strategy
 - **`.claude/skills/`** — installed, production-ready skills sourced from external repositories
-- **`.agents/skills/`** — project-specific agents and their associated skills
+- **`.agents/skills/`** — project-specific skills owned by this workspace
 - **`~/.claude/skills/`** — tools owned externally, referenced via MCP
 
 ### Installed Skills
@@ -99,11 +99,17 @@ For complex multi-step tasks, designate the main agent as orchestrator and subag
 | ai-video-generation | `.claude/skills/` | 40+ AI video models via `infsh` CLI |
 | elevenlabs-tts | `.claude/skills/` | Premium TTS, 22+ voices |
 | copywriting | `.claude/skills/` | Conversion copywriting for marketing pages |
-| python-code-style | `.claude/skills/` | Ruff, mypy, Google-style docstrings |
 | remotion | `.claude/skills/` | Video production with Remotion |
 | interview | `.claude/skills/` | Discovery conversation framework |
 | find-skills | `.claude/skills/` | Skills ecosystem discovery |
-| remotion-best-practices | `.agents/skills/` | 37 Remotion rule files (project-specific) |
+| skill-creator | `.claude/skills/` | Build and benchmark agent skills |
+| python-code-style | `.agents/skills/` | Ruff, mypy, Google-style docstrings |
+| maven-edit | `.agents/skills/` | Maven-Edit style video pipeline |
+| after-effects | `.agents/skills/` | AE ExtendScript automation (macOS) |
+| remotion-best-practices | `.agents/skills/` | 37 Remotion rule files |
+| playwright-cli | `.agents/skills/` | Browser CLI via Playwright CDP |
+| agent-browser | `.agents/skills/` | Full browser automation CLI |
+| seo-audit | `.agents/skills/` | Comprehensive SEO audit framework |
 
 ### Skill Priority (Video Mode)
 When the workspace is in **Video Production mode**, skills are invoked in this order:
@@ -112,6 +118,13 @@ When the workspace is in **Video Production mode**, skills are invoked in this o
 2. `elevenlabs-tts` — voiceover narration
 3. `remotion` — overlay composition, timing, text animations
 4. `copywriting` — script writing, narrative structure
+
+### MCP Servers
+
+| Server | Transport | Purpose |
+|--------|----------|---------|
+| `video-bridge` | stdio (Python) | Unified: YouTube, captions, render, Topaz, quality |
+| `youtube-shorts-transcript-extractor` | stdio (Node) | Playwright-based Shorts transcript extraction |
 
 ---
 

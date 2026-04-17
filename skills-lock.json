@@ -2,9 +2,9 @@
   "version": 1,
   "skills": {
     "after-effects": {
-      "source": "dylantarre/animation-principles",
+      "source": "aedev-tools/adobe-agent-skills",
       "sourceType": "github",
-      "computedHash": "a2d0df968fcbc07469823c72c1f724d854e2ca6a0d94f3e07d183098741cebbc"
+      "computedHash": "f1f79ab96fa8cb63b6c530e360baeb705cf9e2e80b1dc5aad7f0b659f8d67c79"
     },
     "agent-browser": {
       "source": "vercel-labs/agent-browser",

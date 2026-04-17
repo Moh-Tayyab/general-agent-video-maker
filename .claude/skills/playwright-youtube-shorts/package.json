@@ -1,0 +1,30 @@
+{
+  "name": "playwright-youtube-shorts-skill",
+  "version": "1.0.0",
+  "description": "Claude Code skill for extracting transcripts from YouTube Shorts using Playwright",
+  "main": "scripts/extract-transcript.js",
+  "scripts": {
+    "test": "node scripts/extract-transcript.js \"https://www.youtube.com/shorts/VIDEO_ID\"",
+    "install-deps": "npm install playwright && npx playwright install chromium",
+    "mcp-server": "node mcp-server/server.js",
+    "start": "node mcp-server/server.js"
+  },
+  "keywords": [
+    "claude",
+    "skill",
+    "youtube",
+    "shorts",
+    "transcript",
+    "playwright",
+    "automation"
+  ],
+  "author": "Claude Code Skill Creator",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.1",
+    "playwright": "^1.59.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

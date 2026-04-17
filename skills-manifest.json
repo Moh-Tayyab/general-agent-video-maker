@@ -3,11 +3,39 @@
   "version": "1.0.1",
   "workspace": "bootlogix",
   "owner": "Muhammad Tayyab",
-  "updated": "2026-04-07",
+  "updated": "2026-04-16",
   "mcpServers": {
+    "video-bridge": {
+      "command": "python3",
+      "entryPoint": "/home/muhammad_tayyab/bootlogix/mcp_bridge/server.py",
+      "transport": "stdio",
+      "env": {
+        "BOOTLOGIX_WORKSPACE": "/home/muhammad_tayyab/bootlogix/production/output"
+      },
+      "capabilities": [
+        "youtube_upload",
+        "youtube_authenticate",
+        "youtube_get_channel",
+        "youtube_search",
+        "youtube_download",
+        "caption_transcribe",
+        "caption_generate_ass",
+        "render_burn_captions",
+        "render_encode_frames",
+        "render_linear_wipe",
+        "render_convert_format",
+        "topaz_upscale",
+        "topaz_denoise",
+        "quality_validate",
+        "quality_report"
+      ],
+      "source": "local",
+      "description": "Unified video production bridge — YouTube, captions, rendering, Topaz upscale, quality validation"
+    },
     "youtube-shorts-transcript-extractor": {
       "command": "node",
-      "entryPoint": "/home/muhammad_tayyab/.claude/skills/playwright-youtube-shorts/mcp-server/server.js",
+      "entryPoint": "/home/muhammad_tayyab/bootlogix/.claude/skills/playwright-youtube-shorts/mcp-server/server.js",
+      "cwd": "/home/muhammad_tayyab/bootlogix/.claude/skills/playwright-youtube-shorts",
       "transport": "stdio",
       "env": {
         "NODE_ENV": "production"
@@ -146,8 +174,8 @@
     },
     "python-code-style": {
       "name": "python-code-style",
-      "description": "Python code style, linting, formatting, naming conventions, and documentation standards. Covers ruff, mypy, pyright, Google-style docstrings, PEP 8, and project documentation.",
-      "directory": ".claude/skills/python-code-style",
+      "description": "Python code quality: ruff formatting/linting, mypy strict mode type checking, Google-style docstrings, naming conventions, 120-char line length. Python 3.12+.",
+      "directory": ".agents/skills/python-code-style",
       "language": "markdown",
       "mainFile": "SKILL.md",
       "triggers": [
@@ -157,20 +185,18 @@
         "python formatting",
         "ruff",
         "mypy",
-        "pyright",
         "docstring",
         "pep 8",
         "python naming"
       ],
       "relatedSkills": [
-        "mcp-builder",
         "interview"
       ],
       "source": {
-        "type": "github",
-        "owner": "wshobson",
-        "repo": "agents",
-        "path": "python-code-style"
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/python-code-style"
       }
     },
     "remotion": {
@@ -265,7 +291,7 @@
     },
     "find-skills": {
       "name": "find-skills",
-      "description": "Skill discovery guide — uses npx skills find, checks skills.sh leaderboard, verifies quality (install count, source reputation, GitHub stars), presents options with install commands.",
+      "description": "Skill discovery guide — searches the open agent skills ecosystem, checks install count, source reputation, GitHub stars, presents options with install commands.",
       "directory": ".claude/skills/find-skills",
       "language": "markdown",
       "mainFile": "SKILL.md",
@@ -274,8 +300,7 @@
         "search skills",
         "is there a skill for",
         "how do i do x",
-        "skills marketplace",
-        "npx skills find"
+        "skills marketplace"
       ],
       "relatedSkills": [],
       "source": {
@@ -283,6 +308,182 @@
         "owner": "inferen-sh",
         "repo": "skills",
         "path": "find-skills"
+      }
+    },
+    "maven-edit": {
+      "name": "maven-edit",
+      "description": "Re-edit raw video clips in the Maven-Edit style: 9:16 cinematic crop, color grade, BG music with audio ducking, word-by-word karaoke captions (Bangers font, yellow highlights), linear wipe transitions. Full pipeline: ffmpeg (crop/grade/mix/burn) + infsh (upscale/STT) + production bridges.",
+      "directory": ".agents/skills/maven-edit",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "maven edit",
+        "make it like maven edits",
+        "linear wipe transition",
+        "add reaction video captions",
+        "re-edit this clip",
+        "maven-edit style"
+      ],
+      "relatedSkills": [
+        "ai-video-generation",
+        "elevenlabs-tts",
+        "remotion"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/maven-edit"
+      }
+    },
+    "after-effects": {
+      "name": "after-effects",
+      "description": "Automate Adobe After Effects via ExtendScript JSX. Generates and executes JSX scripts via osascript on macOS. Covers layers, keyframes, expressions, compositions, effects, rendering, batch operations. 35+ built-in action scripts.",
+      "directory": ".agents/skills/after-effects",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "after effects",
+        "ae script",
+        "extendscript",
+        "afterfx",
+        "create ae composition",
+        "ae layer",
+        "ae keyframe",
+        "ae expression",
+        "ae render"
+      ],
+      "relatedSkills": [
+        "maven-edit",
+        "remotion"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/after-effects"
+      }
+    },
+    "playwright-cli": {
+      "name": "playwright-cli",
+      "description": "Browser automation from the terminal using Playwright CLI (Chrome DevTools Protocol). Supports multiple sessions, cookies/localStorage persistence, network mocking, console capture, and more. Use for: form filling, login flows, data extraction, page snapshots.",
+      "directory": ".agents/skills/playwright-cli",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "open browser",
+        "fill form",
+        "scrape page",
+        "extract data from page",
+        "browser automation",
+        "playwright cli"
+      ],
+      "allowedTools": [
+        "Bash(playwright-cli *)"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/playwright-cli"
+      }
+    },
+    "agent-browser": {
+      "name": "agent-browser",
+      "description": "Full-featured browser automation CLI (npx agent-browser). CDP/Chrome automation for web scraping, form filling, login flows, network mocking, PDF generation, tab management, video/screenshot recording, Playwright trace viewing. Also supports Electron desktop apps, Slack automation, Vercel Sandbox microVMs, AWS Bedrock AgentCore.",
+      "directory": ".agents/skills/agent-browser",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "open a website",
+        "fill out a form",
+        "scrape data",
+        "automate browser",
+        "automate electron app",
+        "check slack",
+        "send slack message",
+        "run browser in cloud",
+        "browser recording"
+      ],
+      "allowedTools": [
+        "Bash(npx agent-browser:*)"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/agent-browser"
+      }
+    },
+    "seo-audit": {
+      "name": "seo-audit",
+      "description": "Comprehensive SEO audit framework: crawlability, indexation, Core Web Vitals, on-page optimization, content quality, E-E-A-T signals. Covers SaaS, e-commerce, content/blog, and local business sites. Use when: 'SEO audit', 'technical SEO', 'why am I not ranking', 'on-page SEO', 'Core Web Vitals', 'crawl errors'.",
+      "directory": ".agents/skills/seo-audit",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "seo audit",
+        "technical seo",
+        "on-page seo",
+        "why am i not ranking",
+        "core web vitals",
+        "crawl errors",
+        "site health check",
+        "seo issues"
+      ],
+      "relatedSkills": [
+        "agent-browser",
+        "playwright-cli"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/seo-audit"
+      }
+    },
+    "remotion-best-practices": {
+      "name": "remotion-best-practices",
+      "description": "37 Remotion rule files covering 3D, animations, assets, audio-visualization, charts, compositions, display-captions, extract-frames, ffmpeg, fonts, gifs, images, lottie, maps, measuring-dom-nodes, measuring-text, sequencing, sfx, subtitles, tailwind, text-animations, timing, transitions, transparent-videos, trimming, videos, voiceover, and more.",
+      "directory": ".agents/skills/remotion-best-practices",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "remotion best practices",
+        "remotion rules",
+        "remotion animation",
+        "remotion composition"
+      ],
+      "relatedSkills": [
+        "remotion",
+        "ai-video-generation"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".agents/skills/remotion-best-practices"
+      }
+    },
+    "skill-creator": {
+      "name": "skill-creator",
+      "description": "Create, improve, and benchmark agent skills. Supports skill evaluation with benchmark datasets, grading agents, variance analysis, and automated description optimization.",
+      "directory": ".claude/skills/skill-creator",
+      "language": "markdown",
+      "mainFile": "SKILL.md",
+      "triggers": [
+        "create a skill",
+        "make a new skill",
+        "improve a skill",
+        "benchmark a skill",
+        "skill evaluation",
+        "skill quality"
+      ],
+      "source": {
+        "type": "local",
+        "owner": "bootlogix",
+        "repo": "workspace",
+        "path": ".claude/skills/skill-creator"
       }
     }
   },
@@ -294,6 +495,7 @@
         "elevenlabs-tts",
         "remotion",
         "remotion-best-practices",
+        "maven-edit",
         "copywriting"
       ]
     },
@@ -303,11 +505,24 @@
         "python-code-style"
       ]
     },
+    "browser-automation": {
+      "description": "Web scraping, form automation, and browser interaction",
+      "skills": [
+        "playwright-cli",
+        "agent-browser"
+      ]
+    },
     "research": {
       "description": "Discovery and requirement gathering",
       "skills": [
         "interview",
         "find-skills"
+      ]
+    },
+    "seo": {
+      "description": "SEO audit and optimization",
+      "skills": [
+        "seo-audit"
       ]
     }
   },

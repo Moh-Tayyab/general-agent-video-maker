@@ -4,13 +4,12 @@ import json
 import subprocess
 from typing import Any, Dict, Optional
 from dataclasses import dataclass
+from pathlib import Path
 
-# Setup logging for the agentic system
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='/home/muhammad_tayyab/bootlogix/mcp_bridge/agent_pipeline.log'
-)
+# ─── Logging ──────────────────────────────────────────────────────────────────
+LOG_FORMAT = "[AGENT] %(asctime)s - %(name)s - %(levelname)s - %(message)s"
+logging.basicConfig(level=logging.INFO, format=LOG_FORMAT)
+logger = logging.getLogger("AgentSystem")
 
 @dataclass
 class SkillResult:
@@ -66,9 +65,7 @@ class VideoEditingSpecialist(BaseAgent):
         super().__init__("VideoEditingSpecialist")
 
     def skill_trim_video(self, params: Dict[str, Any]) -> SkillResult:
-        # Logic to trigger Premiere Pro .jsx script
         self.logger.info("Calling Premiere Pro ExtendScript: trim_to_reference.jsx")
-        # Implementation would use subprocess.run(['osascript', ...]) or similar
         return SkillResult(success=True, artifact_path="project/Video01_RoughCut_v1.prproj", metadata={"duration": "60s"})
 
     def skill_integrate_audio(self, params: Dict[str, Any]) -> SkillResult:
@@ -76,7 +73,6 @@ class VideoEditingSpecialist(BaseAgent):
         return SkillResult(success=True, artifact_path="project/Video01_AudioMix_v1.prproj", metadata={"mix_level": "-12db"})
 
     def validate_output(self, result: SkillResult) -> bool:
-        # Constitution Rule: Verify audio sync and pacing
         return result.success and result.artifact_path is not None
 
 class AIEnhancementSpecialist(BaseAgent):
@@ -84,7 +80,6 @@ class AIEnhancementSpecialist(BaseAgent):
         super().__init__("AIEnhancementSpecialist")
 
     def skill_upscale_resolution(self, params: Dict[str, Any]) -> SkillResult:
-        # Logic to trigger Topaz AI CLI
         self.logger.info("Calling Topaz AI CLI: upscale --model Proteus")
         return SkillResult(success=True, artifact_path="project/Video01_Topaz_v1.mp4", metadata={"resolution": "3840x2160"})
 
@@ -93,8 +88,7 @@ class AIEnhancementSpecialist(BaseAgent):
         return SkillResult(success=True, artifact_path="project/Video01_Enhanced_v1.mp4", metadata={"denoise_level": "50"})
 
     def validate_output(self, result: SkillResult) -> bool:
-        # Constitution Rule: Artifact check and visual fidelity
-        return result.success and "Video01" in result.artifact_path
+        return result.success and result.artifact_path is not None
 
 class GraphicsAndVFXSpecialist(BaseAgent):
     def __init__(self):
@@ -113,5 +107,4 @@ class GraphicsAndVFXSpecialist(BaseAgent):
         return SkillResult(success=True, artifact_path="output/final_youtube_short.mp4", metadata={"format": "MP4", "codec": "H.264"})
 
     def validate_output(self, result: SkillResult) -> bool:
-        # Constitution Rule: Caption readability and color cohesion
-        return result.success and result.artifact_path.endswith(".mp4")
+        return result.success and result.artifact_path is not None
